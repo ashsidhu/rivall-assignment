@@ -1,0 +1,22 @@
+{
+  "name": "rivall",
+  "version": "0.0.1",
+  "description": "Assignment from Rivall",
+  "main": "src/index.js",
+  "author": "Ashmeet Sidhu <ashmeet.sidhu7@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon src/index.js --exec babel-node",
+    "build": "babel src -d dist",
+    "serve": "node dist/index.js",
+    "test": "mocha --require babel-register"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "mocha": "^5.0.5",
+    "nodemon": "^1.17.3"
+  }
+}
