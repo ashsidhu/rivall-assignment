@@ -1,8 +1,8 @@
-import http from 'http';
+require("dotenv").config();
+import app from "./app";
 
-http.createServer((req, res) => {
-  res.writeHead(200, {'Content-Type': 'text/plain'});
-  res.end('Hello World\n');
-}).listen(1337, '127.0.0.1');
+const port = process.env.PORT;
 
-console.log('Server running at http://127.0.0.1:1337/');
+app.listen(port, () => {
+  console.log(`Express app running at http://127.0.0.1:${port}/`);
+});
