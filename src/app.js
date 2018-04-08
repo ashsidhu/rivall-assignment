@@ -2,6 +2,7 @@ import express from "express";
 import bodyParser from "body-parser";
 import morgan from "morgan";
 import { NotFoundError, ServerError } from "./errors";
+import db from './db';
 
 const app = express();
 
