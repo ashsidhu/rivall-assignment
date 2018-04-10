@@ -8,10 +8,10 @@ exports.up = function(knex, Promise) {
       table.foreign("schedule_id").references("league_schedule.id");
       table.integer("day_id").unsigned().notNullable();
       table.foreign("day_id").references("league_day.id");
-      table.time("start_time").notNullable();
-      table.time("end_time").notNullable();
+      table.timestamp("start_time", true).notNullable();
+      table.timestamp("end_time", true).notNullable();
       table.string("field_name");
-      table.specificType("teams", "text[]");
+      table.specificType("teams", "text[]");//
       table.string("winner");
       table.json("venue");
       table.timestamps(true, true);

@@ -13,7 +13,7 @@ exports.up = function(knex, Promise) {
       table.integer("num_week").unsigned();
       table.boolean("has_tournament");
       table.string("schedule_type");
-      table.date("start_date");
+      table.timestamp("start_date", true);
       table.json("time_frame");
       table.string("time_zone");
       table.specificType("week_descriptions", "text[]");
