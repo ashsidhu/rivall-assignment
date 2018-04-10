@@ -6,7 +6,7 @@
   "author": "Ashmeet Sidhu <ashmeet.sidhu7@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon src/index.js --exec babel-node",
+    "start": "nodemon src/index.js --exec babel-node --inspect",
     "build": "babel src -d dist",
     "serve": "node dist/index.js",
     "test": "mocha --require babel-register"
@@ -20,6 +20,7 @@
     "nodemon": "^1.17.3"
   },
   "dependencies": {
+    "bluebird": "^3.5.1",
     "dotenv": "^5.0.1",
     "express": "^4.16.3",
     "knex": "^0.14.4",

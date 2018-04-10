@@ -15,5 +15,5 @@ export class NotFoundError extends Error {
 
 export class ServerError extends Error {
   code = 500;
-  message = this.message || "Internal Server Error";
+  message = "Internal Server Error";
 }
