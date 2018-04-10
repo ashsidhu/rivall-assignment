@@ -14,6 +14,14 @@ const dbConfig = {
     migrations: {
       tableName: "migrations"
     },
+    timezone: "UTC",
+    pool: {
+      afterCreate: function(connection, callback) {
+        connection.query('SET timezone="UTC";', function(err) {
+          callback(err, connection);
+        });
+      }
+    },
     useNullAsDefault: true
   }
 };

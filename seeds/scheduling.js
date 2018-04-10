@@ -10,10 +10,6 @@ const teams = [
 
 const schedule_id = 1;
 
-const oneDayInMs = 86400000;
-function getDate(daysAhead = 0) {
-  return new Date(Date.now() + daysAhead * oneDayInMs).toDateString();
-}
 const date_1 = "2018-04-06 12:00 AM"
 const date_2 = "2018-04-07 12:00 AM"
 const day_ids = [1, 2]
@@ -23,10 +19,10 @@ const days = [
 ];
 
 const game_ids = [1, 2, 3, 4];
-const start_time_1 = "2018-04-06 05:00 PM"
-const end_time_1 = "2018-04-06 06:00 PM"
-const start_time_2 = "2018-04-07 05:00 PM"
-const end_time_2 = "2018-04-07 06:00 PM"
+const start_time_1 = "2018-04-06 05:00 PM +05:30"
+const end_time_1 = "2018-04-06 06:00 PM +05:30"
+const start_time_2 = "2018-04-07 05:00 PM +05:30"
+const end_time_2 = "2018-04-07 06:00 PM +05:30"
 
 const games = [
   { id: game_ids[0], day_id: day_ids[0], schedule_id, league_id, start_time: start_time_1, end_time: end_time_1},

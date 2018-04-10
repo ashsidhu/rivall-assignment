@@ -6,7 +6,7 @@ exports.up = function(knex, Promise) {
       table.foreign("league_id").references("leagues.id");
       table.integer("schedule_id").unsigned().notNullable();
       table.foreign("schedule_id").references("league_schedule.id");
-      table.timestamp("date", true).notNullable();
+      table.timestamp("date").notNullable();
       table.boolean("is_tournament");
       table.specificType("byes", "integer[]");
       table.timestamps(true, true);
