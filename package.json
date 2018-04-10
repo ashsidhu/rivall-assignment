@@ -6,7 +6,9 @@
   "author": "Ashmeet Sidhu <ashmeet.sidhu7@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon src/index.js --exec babel-node --inspect",
+    "start": "node ./node_modules/nodemon/bin/nodemon src/index.js --exec babel-node --inspect",
+    "migrate": "node ./node_modules/knex/bin/cli migrate:latest",
+    "seed": "node ./node_modules/knex/bin/cli seed:run",
     "build": "babel src -d dist",
     "serve": "node dist/index.js",
     "test": "mocha --require babel-register"
